@@ -8,7 +8,6 @@ public class ques1 {
     char[][] board;
     int count = 0;
 
-    // Hash arrays
     boolean[] col;
     boolean[] diag1; // row - col + n - 1
     boolean[] diag2; // row + col
@@ -23,13 +22,11 @@ public class ques1 {
         for (int c = 0; c < n; c++) {
             if (!col[c] && !diag1[row - c + n - 1] && !diag2[row + c]) {
 
-                // Place queen
                 board[row][c] = 'Q';
                 col[c] = diag1[row - c + n - 1] = diag2[row + c] = true;
 
                 solve(row + 1);
 
-                // Backtrack
                 board[row][c] = '.';
                 col[c] = diag1[row - c + n - 1] = diag2[row + c] = false;
             }
@@ -67,6 +64,8 @@ public class ques1 {
         obj.solve(0);
 
         System.out.println("Total solutions: " + obj.count);
+
+        
         sc.close();
     }
     
