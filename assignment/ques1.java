@@ -67,6 +67,9 @@ public class ques1 {
 
         
         sc.close();
+
+        //Time Complexity: O(N!)
+        //Space Complexity: O(N²)
     }
     
 }
