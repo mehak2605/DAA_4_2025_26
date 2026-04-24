@@ -84,5 +84,7 @@ public class ques2 {
         hc.findCycle();
 
         sc.close();
+        //Time complexity: O(V!)
+        //Space complexity: O(V²)
     }
 }
